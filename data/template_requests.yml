@@ -1,0 +1,315 @@
+boleto_template: "
+       <transaction-request>
+          <version>3.1.1.15</version>
+           <verification>
+               <merchantId>100</merchantId>
+               <merchantKey>21g8u6gh6szw1gywfs165vui</merchantKey>
+           </verification>
+          <order>
+             <sale>
+                <processorID>11</processorID>
+                <referenceNum>MXP_BOLETO-REG</referenceNum>
+                <ipAddress>123.123.123.123</ipAddress>
+                <customerIdExt>46674194662</customerIdExt>
+                <billing>
+                    <name>Maxipago Brasil</name>
+                    <address>Rua Marcos Penteado Ulhoa Rodrigues</address>
+                    <address2>11 Andar</address2>
+                    <city>Barueri</city>
+                    <state>SP</state>
+                    <district>Tambore</district>
+                    <postalcode>06460-040</postalcode>
+                    <country>BR</country>
+                    <phone>1121218536</phone>
+                    <email>luiz.cruz@maxipago.com</email>
+                    <documents>
+                       <document>
+                         <documentType>CPF</documentType>
+                         <documentValue>46674194662</documentValue>
+                        </document> 
+                    </documents>
+                </billing>
+                <transactionDetail>
+                   <payType>
+                      <boleto>
+                         <expirationDate>2020-12-25</expirationDate>
+                         <number>99999998</number>
+                         <instructions>ÁÉÍÓÚáéíóú ÀÈÌÒÙàèìòù ÂÊÎÔÛâêîôû ÃÑÕñãõ Çç NOVEMBRO/0101 R$ 123.45</instructions>
+                         <format>pdf</format>
+
+                      </boleto>
+                   </payType>
+                </transactionDetail>
+                <payment>
+                   <chargeTotal>100.00</chargeTotal>
+                </payment>
+             </sale>
+          </order>
+       </transaction-request>"
+
+discount: "<discount>
+    <!-- Desconto -->
+    <date>2020-12-01</date>
+    <type>amount</type>
+    <value>50.00</value>
+    </discount>"
+
+interestRate: "<interestRate>
+    <!-- Juros -->
+    <date>2020-12-31</date>
+    <type>percentual</type>
+    <value>15</value>
+    <frequency>monthly</frequency>
+ </interestRate>"
+
+charge: "<charge>
+    <!-- Multa -->
+    <date>2020-12-31</date>
+    <type>percentual</type>
+    <value>10.00</value>
+    </charge>"
+
+transaction_simple: "<transaction-request>
+          <version>3.1.1.15</version>
+          <verification>
+                <merchantId>9480</merchantId>
+                <merchantKey>xxyyw3s5gafeinv7jcyvrcri</merchantKey>
+          </verification>
+           <order>
+            <sale>
+                 <processorID>1</processorID>
+                 <referenceNum>MAXI_REF</referenceNum>
+              <fraudCheck>N</fraudCheck>
+              <transactionDetail>
+                <payType>
+                  <creditCard>
+                    <number>5448280000000007</number>
+                    <expMonth>01</expMonth>
+                    <expYear>2030</expYear>
+                    <cvvNumber>915</cvvNumber>
+                  </creditCard>
+                </payType>
+              </transactionDetail>
+              <payment>
+                <chargeTotal>10.00</chargeTotal>
+              </payment>
+            </sale>
+          </order>
+        </transaction-request>"
+
+recurring_simple: "<transaction-request>
+    <version>3.1.1.15</version>
+    <verification>
+        <merchantId>9480</merchantId>
+        <merchantKey>xxyyw3s5gafeinv7jcyvrcri</merchantKey>
+    </verification>
+    <order>
+        <recurringPayment>
+            <processorID>1</processorID>
+            <referenceNum>765434456</referenceNum>
+            <ipAddress>123.123.123.123</ipAddress>
+            <customerIdExt>37119194054</customerIdExt>
+            <billing>
+                <name>Fulano de Tal</name>
+                <address>Av. Republica Livre, 230</address>
+                <address2>16 Andar</address2>
+                <district>Centro</district>
+                <city>Sao Paulo</city>
+                <state>SP</state>
+                <postalcode>08021310</postalcode>
+                <country>BR</country>
+                <phone>1132890900</phone>
+                <email>billing@maxipago.com</email>
+                <companyName>Empresa X</companyName>
+            </billing>
+            <shipping>
+                <name>Fulano de Tal</name>
+                <address>Av. Republica Livre, 230</address>
+                <address2>16 Andar</address2>
+                <district>Centro</district>
+                <city>Sao Paulo</city>
+                <state>SP</state>
+                <postalcode>08021310</postalcode>
+                <country>BR</country>
+                <phone>1132890900</phone>
+                <email>shipping@maxipago.com</email>
+            </shipping>
+            <transactionDetail>
+                <payType>
+                    <creditCard>
+                        <number>5537837159928759</number>
+                        <expMonth>07</expMonth>
+                        <expYear>2029</expYear>
+                        <cvvNumber>268</cvvNumber>
+                    </creditCard>
+                </payType>
+            </transactionDetail>
+            <payment>
+                <chargeTotal>14.00</chargeTotal>
+                <currencyCode>BRL</currencyCode>
+            </payment>
+            <recurring>
+                <action>new</action>
+                <startDate>2019-10-25</startDate>
+                <period>daily</period>
+                <frequency>1</frequency>
+                <installments>12</installments>
+                <firstAmount>22.00</firstAmount>
+                <failureThreshold>15</failureThreshold>
+            </recurring>
+        </recurringPayment>
+    </order>
+</transaction-request>"
+
+add_payment_order_simple: "<api-request>
+<verification>
+    <merchantId>12520</merchantId>
+    <merchantKey>iyjz9emmqg45glykcpafal8c</merchantKey>
+</verification>
+<command>add-payment-order</command>
+<request>
+    <referenceNum>{{numeracaoRandom12}}</referenceNum>
+    <fraudCheck>Y</fraudCheck>
+    <billing>
+        <address>Rua Marcos Penteado Ulhoa Rodrigues</address>
+        <address2>11 Andar</address2>
+        <city>Barueri</city>
+        <state>SP</state>
+        <postalcode>06460-040</postalcode>
+        <country>BR</country>
+        <phone>1121218536</phone>
+        <email>luiz.cruz@maxipago.com</email>
+        <customerIdExt>52684412057</customerIdExt>
+        <firstName>Teste</firstName>
+        <lastName>Maxipay</lastName>
+        <dob>01/30/1984</dob>
+        <sex>M</sex>
+        <district>Tambore</district>
+    </billing>
+    <transactionDetail>
+        <description>Pagamento Parcela Do Carro referencia - {{numeracaoRandom12}}</description>
+        <comments>Pagar ate dia 30</comments>
+        <emailSubject>Favor efetuar o pagamento</emailSubject>
+        <expirationDate>10/10/2020</expirationDate>
+        <payType>
+            <creditCard>
+                <processorID>1</processorID>
+                <operation>sale</operation>
+                <numberOfInstallments>2</numberOfInstallments>
+                <currencyCode>BRL</currencyCode>
+                <amount>100.00</amount>
+            </creditCard>
+        </payType>
+    </transactionDetail>
+</request>
+</api-request>"
+
+rapi_payment_order_simple: "<rapi-request>
+ <version>3.1.1.15</version>
+ <verification>
+   <merchantId>12520</merchantId>
+   <merchantKey>iyjz9emmqg45glykcpafal8c</merchantKey>
+ </verification>
+ <command>paymentOrderDetailReport</command>
+ <request>
+   <filterOptions>
+     <payOrderId>gj1nk0</payOrderId>
+   </filterOptions>
+ </request>
+</rapi-request>"
+
+rapi_transaction_simple: "<rapi-request>
+  <verification>
+  <merchantId>12520</merchantId>
+  <merchantKey>iyjz9emmqg45glykcpafal8c</merchantKey>
+  </verification>
+  <command>transactionDetailReport</command>
+  <request>
+    <filterOptions>
+      <orderId>{{orderID_reportsVenda}}</orderId>
+    </filterOptions>
+  </request>
+</rapi-request>"
+
+transaction_auth_simple: "<transaction-request>
+  <version>3.1.1.15</version>
+  <verification>
+    <merchantId>9480</merchantId>
+    <merchantKey>xxyyw3s5gafeinv7jcyvrcri</merchantKey>
+  </verification>
+  <order>
+    <auth>
+        <processorID>1</processorID>
+        <referenceNum>{{referenceNum}}</referenceNum>
+      <fraudCheck>N</fraudCheck>
+      <transactionDetail>
+        <payType>
+          <creditCard>
+            <number>{{creditCard_number}}</number>
+            <expMonth>07</expMonth>
+            <expYear>2029</expYear>
+            <cvvNumber>268</cvvNumber>
+          </creditCard>
+        </payType>
+      </transactionDetail>
+      <payment>
+        <chargeTotal>{{chargeTotal}}</chargeTotal>
+      </payment>
+    </auth>
+  </order>
+</transaction-request>"
+
+transaction_sale_pix_simple: "<transaction-request>
+  <version>3.1.1.15</version>
+  <verification>
+        <merchantId>100</merchantId>
+        <merchantKey>21g8u6gh6szw1gywfs165vui</merchantKey>
+  </verification>
+   <order>
+    <sale>
+       <processorID>205</processorID>
+       <referenceNum>MAXI_REF</referenceNum>
+       <fraudCheck>N</fraudCheck>
+       <customerIdExt>39300937820</customerIdExt>
+       <billing>
+         <name>Pix da Silva Sauro</name>
+         <address>Rua Pedro Luiz, 134</address>
+         <address2>Casa</address2>
+         <district>Jardim Sao Joao</district>
+         <city>Sao Paulo</city>
+         <state>SP</state>
+         <postalcode>07151-385</postalcode>
+         <country>BR</country>
+         <phone>1121218535</phone>
+         <email>luiz.cruz@maxipago.com</email>
+         <documents>
+           <document>
+             <documentType>CPF</documentType>
+             <documentValue>22854404406</documentValue>
+           </document>
+         </documents>
+       </billing>
+       <transactionDetail>
+         <payType>
+           <pix>
+             <expirationTime>7200</expirationTime>
+             <paymentInfo>Smart Watch Pix Promo 2021 Model v20210102 Blue</paymentInfo>
+             <extraInfo>
+               <info>
+                 <name>Smart Watch</name>
+                 <value>R$125.00</value>
+               </info>
+               <info>
+                 <name>Garantia Estendida</name>
+                 <value>R$25.00</value>
+               </info>
+             </extraInfo>
+           </pix>
+         </payType>
+       </transactionDetail>
+       <payment>
+         <chargeTotal>10.00</chargeTotal>
+       </payment>
+    </sale>
+  </order>
+</transaction-request>"

@@ -1,0 +1,60 @@
+#dados portal
+user: "94518252071"
+senha: "teste123"
+
+#dados maxipay_e2e
+user_request: "52684412057"
+senha_request: "a1234567"
+
+user_request_2: "46479403061"
+senha_request_2: "Bk2DPnGzzP1gJR4AQc9sZQ=="
+
+user_request: "52684412057"
+senha_request: "a1234567"
+
+#######################
+pt_br: "li[ng-class='pt_BR']"
+en: "li[ng-class='en']"
+es: "li[ng-class='es']"
+esqueci_senha: "a[class='resetPassword ng-binding']"
+#######################
+
+logo: "div[class='col-sm-2 logoEmpresa']"
+
+card type: "MasterCard"
+card Number: "5574235546386837"
+expire Date: "08|24"
+cvv: "680"
+name: "Pagador Portal Link de Pagamento"
+address: "5 Schurz Circle"
+country: "Brazil"
+
+################
+username: "input[name='username']"
+password: "input[name='password']"
+btn_login: "input[id='btn-login']"
+campo_pesquisa: "input[ng-model='searchText']"
+modal_pagamento: "div[class='row card ng-scope']"
+btn_pagamento: "button[class='btn btn-primary ng-binding ng-scope']"
+click_recaptcha: "div[id='recaptcha_element']"
+campo_cvv: "input[id='input_1']"
+campo_cvv_link: "input[name='cardCVV']"
+btn_confirmar: "button[class='btn btn-success botao ng-binding']"
+msg_pagamento: "h2[class='ng-binding']"
+btn_novo_card_pt: ".//md-radio-button[@aria-label='Novo Cartão de Crédito']"
+btn_novo_card_en: ".//md-radio-button[@aria-label='New Credit Card']"
+card_select: ".//md-radio-group[@ng-model='selectCard.value']/div/md-radio-button/div[@class='md-container md-ink-ripple']"
+campo_cardNumber: "input[name='cardNumber']"
+campo_cardMonth: "input[name='cardMonth']"
+campo_cardYear: "input[name='cardYear']"
+campo_cardHolder: "input[name='cardHolder']"
+aviso_corona: "div[ng-if='isCoronaVoucher()']"
+ck_save_card_pt: ".//div[@class='md-label'][text()='Salvar cartão de crédito']/ancestor::md-checkbox"
+ck_save_card_en: ".//div[@class='md-label'][text()='Save card']/ancestor::md-checkbox"
+
+
+
+
+#boleto pdf
+barcode: ".//img[contains(@src,'barcode')]"
+boletopdf: ".//*[@type='application/pdf']"

@@ -1,0 +1,7 @@
+#submenu
+# estorno: "//*[@id='sc1']/table/tbody/tr/td/table/tbody/tr/td[4]/a"
+estorno: ".//*[contains(text(),'Estorno')]"
+estorno_en: ".//*[contains(text(),'Refund')]"
+
+total_estorno: "input[name='available']"
+radio_button_transaction_id: ".//input[@id='chk_transaction_id']"

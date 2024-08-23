@@ -1,0 +1,12 @@
+#submenu
+# capturar_pedidos: "//*[@id='sc1']/table/tbody/tr/td/table/tbody/tr/td[3]/a"
+capturar_pedidos: ".//*[contains(text(),'Capturar pedidos')]"
+capturar_pedidos_en: ".//*[contains(text(),'Capture funds')]"
+
+#busca ID a ser capturado
+campo_busca_orderID_captura: "input[id='order_id']"
+campo_busca_transactionID: ".//input[@id='transaction_id']"
+
+btn_busca_orderID_captura: "img[id='show']"
+valor_total_captura: "input[id='transaction_amount_b']"
+pedido_capturado: "td[class='error']"

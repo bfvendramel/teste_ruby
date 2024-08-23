@@ -1,0 +1,33 @@
+admin: ".//*[contains(text(),'Admin')]" #"//*[@id='ddimagetabs']/table/tbody/tr/td/ul/li[3]/a"
+configuracoes: ".//*[contains(text(),'Configurações')]" #"//*[@id='sc3']/table/tbody/tr/td/table/tbody/tr/td[6]/a"
+configuracoes_en: ".//*[contains(text(),'Settings')]" #"//*[@id='sc3']/table/tbody/tr/td/table/tbody/tr/td[6]/a"
+configuracoes_2: "//*[@id='sc3']/table/tbody/tr/td/table/tbody/tr/td[6]"
+configuracoes_en_2: "//*[@id='sc3']/table/tbody/tr/td/table/tbody/tr/td[6]"
+#maxiPay
+maxiPay: "a[class='tablabel']" # text: "maxi"
+Tipo_transacao_nao: ".//input[@name='transaction_maxipay_type' and @value='SALE']"
+Tipo_transacao_sim: ".//input[@name='transaction_maxipay_type' and @value='AUTH']"
+fraude_nao: ".//input[@name='fraud_maxipay_review' and @value='0']"
+fraude_sim: ".//input[@name='fraud_maxipay_review' and @value='1']"
+dois_zero: ".//input[@name='client_maxipay_auth' and @value='1']"
+tres_zero: ".//input[@name='client_maxipay_auth' and @value='0']"
+btn_salvar: "input[title='Salvar']"
+btn_salvar_en: "input[title='Save Settings']"
+
+#fraud
+fraud: "a[class='tablabel']" #text: "Fraud"
+by_card: "input[name='block_by_cardnum_flag']"
+by_name: "input[name='block_by_name_flag']"
+by_email: "input[name='block_by_email_flag']"
+by_CEP: "input[name='block_by_zipcode_flag']"
+xby_card: ".//input[@name='block_by_cardnum_flag' and @checked='1']"
+xby_name: ".//input[@name='block_by_name_flag' and @checked='1']"
+xby_email: ".//input[@name='block_by_email_flag' and @checked='1']"
+xby_CEP: ".//input[@name='block_by_zipcode_flag' and @checked='1']"
+save_config: "input[class='normal']"
+success: "td[class='success']"
+
+
+
+#
+radio_today: "input[value='today']"

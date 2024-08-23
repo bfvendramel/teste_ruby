@@ -1,0 +1,12 @@
+title: ".//span[@class='title']"
+
+table: ".//table[@class='mguser']"
+table_header: ".//th[contains(@class,'mguserhdrbold2 r b')]"
+table_body: ".//table[@class='mguser']/tbody/tr[contains(@class,'rptitem')]"
+table_item: "td[class='w2 r b normal']"
+id_transacao: ".//div[contains(text(),'ID da Transação')]/ancestor::tr[1]/td[2]"
+total_value: ".//td[contains(text(),'Total:')]/ancestor::tr[1]/td[2]/div"
+Data_value: ".//tr[@class='rptitem'][1]/td[@class='w2 r b normal'][1]"
+Operacao_value: ".//tr[@class='rptitem'][1]/td[@class='w2 r b normal'][2]"
+Status_value: ".//tr[@class='rptitem'][1]/td[@class='w2 r b normal'][3]"
+Valor_value: ".//tr[@class='rptitem'][1]/td[@class='w2 r b normal'][4]"

@@ -1,0 +1,2 @@
+    approvedDeclined: "img[id='txnapproved_img']"
+    transactionVolume: "img[id='txnvolume_img']"

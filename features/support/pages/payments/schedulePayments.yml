@@ -1,0 +1,18 @@
+#submenu
+# agendar_pagamento: "//*[@id='sc1']/table/tbody/tr/td/table/tbody/tr/td[2]/a"
+agendar_pagamento: ".//*[contains(text(),'Agendar Pagamento')]"
+agendar_pagamento_en: ".//*[contains(text(),'Schedule Payments')]"
+
+#periodicidade
+one_week: ".//input[@name='periodicity' and @value='1w']"
+two_weeks: ".//input[@name='periodicity' and @value='2w']"
+one_month: ".//input[@name='periodicity' and @value='1m']"
+three_months: ".//input[@name='periodicity' and @value='3m']"
+
+#data/numero de pagamentos
+installments: "input[id='installments']"
+1stDate: "input[id='startdate_b']"
+aprovada: "span[class='successbox']"
+# pega_orderID:
+#   campo_orderID: "//*[@id='main']/tbody/tr/td/table/tbody/tr[4]/td[2]/table/tbody/tr[3]" #usar com o orderID
+orderID: "input[name='order_id']"

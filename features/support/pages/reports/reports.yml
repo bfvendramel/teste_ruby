@@ -1,0 +1,30 @@
+#menu
+#subMenu
+relatorios: ".//*[@id='ddimagetabs']/table/tbody/tr/td/ul/li[2]/a"
+relatorios_transacoes: ".//*[@id='sc2']//a[@class='hmenu'][text()='Transações']"
+relatorios_transacoes_en: ".//*[@id='sc2']//a[@class='hmenu'][text()='Transactions']"  
+pedidos_confirmados: ".//a[contains(@onclick,'rptsettle')]"
+pagamentos_agendados: ".//a[contains(@onclick,'rptrecurring')]"
+fraud_control: ".//a[contains(@onclick,'fraudTransaction')]"
+
+# relatorios_transacoes:
+table: ".//table[@id='tbltxn']"
+table_Header: ".//table[@id='tbltxn']/tbody/tr/th[contains(@class,'mguserhdrbold2')]"
+table_body: ".//table[@id='tbltxn']/tbody/tr[contains(@class,'rptitem')]"
+table_item: "td[class='w2 r b normal']"
+table_link: "/a[contains(@onclick,'goDetailPage')]"
+title_data: ".//*[@id='tbltxn']/tbody/tr/th[contains(text(),'Data')]"
+title_date: ".//*[@id='tbltxn']/tbody/tr/th[contains(text(),'Date')]"
+download_btn: ".//*[@title='Exportar para Excel (CSV)']"
+download_btn_en: ".//*[@title='Export to Excel(CSV)']"
+
+#  ".//input[@id='download_btn']"
+continue_bt: ".//input[@name='continue_bt']"
+
+period_today: ".//input[@id='period'][@value='today']"
+period_yesterday: ".//input[@id='period'][@value='yesterday']"
+period_thisweek: ".//input[@id='period'][@value='thisweek']"
+period_thismonth: ".//input[@id='period'][@value='thismonth']"
+
+
+

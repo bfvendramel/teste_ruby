@@ -1,0 +1,27 @@
+customers: "//*[@id='sc3']/table/tbody/tr/td/table/tbody/tr/td[2]/a"
+
+btn_add_customer: "input[title='Adicionar um cliente']"
+btn_add_customer_en: "input[title='Add a Customer']"
+
+#form cliente
+first_name: "input[id='first_name']"
+last_name: "input[id='last_name']"
+consumer_id: "input[id='consumer_id']"
+gender:
+  male: "//input[@name='sex' and @value='M']"
+  female: "//input[@name='sex' and @value='F']"
+address: "input[id='address1']"
+city: "input[id='city']"
+state: "select[id='state']" #.find("*[value='sigla estado']").select_option
+zip_code: "input[id='zip']"
+country: "select[id='country']" #.find("*[value='BR']").select_option
+phone: "input[id='phone']"
+alternate_phone: "input[id='alternate_phone']"
+email: "input[id='email']"
+btn_add_cust_confirm: "input[name='continue_bt']"
+
+#tabela de cliente added
+cliente_1: "tr[class='rptitem']"
+cliente_2: "tr[class='rptitem1']"
+#auto_id: ".//td[text()='#{$consumer_id}']/ancestor::tr[1]/td[1]"
+#btn_del_cliente: "javascript:deleteConsumer('#{id}');return(false);" #execute_script - usar comando js

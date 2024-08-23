@@ -1,0 +1,19 @@
+logo_pix: ".//img[contains(@src,'pix-logo')]"
+logo_checkout: ".//td[text()='Checkout']"
+
+logo_your_bank: ".//td[text()='YourBank']"
+
+
+imagem_base64_init: ".//img[@src='data:image/png;base64,"
+imagem_base64_end: "')]"
+
+campo_img_base64: ".//img[contains(@src,'data:image/png;base64,')]"
+campo_emv: ".//textarea[@id='emv']"
+campo_merchant: ".//td[text()='Merchant:']/ancestor::tr[1]/td[text()!='Merchant:']"
+campo_amount: ".//td[text()='Amount:']/ancestor::tr[1]/td[text()!='Amount:']"
+campo_info: ".//td[text()='Info:']/ancestor::tr[1]/td[text()!='Info:']"
+campo_consumer: ".//td[text()='Consumer:']/ancestor::tr[1]/td[text()!='Consumer:']"
+campo_creation_date: ".//td[text()='Creation Date:']/ancestor::tr[1]/td[text()!='Creation Date:']"
+campo_expiration_date: ".//td[text()='Expiration Date:']/ancestor::tr[1]/td[text()!='Expiration Date:']"
+
+bt_payment_page: ".//button[@onclick='javascript:submitEMV();']"

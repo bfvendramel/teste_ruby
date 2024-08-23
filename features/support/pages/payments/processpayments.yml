@@ -1,0 +1,89 @@
+#process_payments
+#schedule payments
+
+#menu
+#subMenu
+transacoes: "//*[@id='ddimagetabs']/table/tbody/tr/td/ul/li[1]/a"
+processar_pagamento_exception: "//*[@id='sc1']/table/tbody/tr/td/table/tbody/tr/td[1]/a"
+processar_pagamento: ".//*[contains(text(),'Processar Pagamento')]"
+processar_pagamento_en: ".//*[contains(text(),'Process Payment')]"
+#pagamentos_agendados: ".//a[contains(@onclick,'rptrecurring')]"
+#transacoes: ".//a[contains(@onclick,'expandcontent('sc1', this)')]"
+
+
+busca_customer: "select[name='custfind']"
+campo_busca_customer: "input[id='textsearchfield']"
+btn_busca_customer: "a[id='searchanchor']"
+error_dailog: "p[class='error']"
+
+#inside iFrame
+id_iframe: ".//*[@id='GB_frame']"
+loading_id: "div[id='loading']"
+name_iframe: ".//*[@name='GB_frame']"
+frame_CampoID: ".//*[@class='mguserhdrbold2 r b'][text()='ID']"
+frame_BtnContinuar: ".//input[@class='button' and @value='Continuar']" #"input[class='button'][value='Continuar']" #
+frame_BtnContinue: ".//input[@class='button' and @value='Continue']" #"input[class='button'][value='Continue']" #
+frame_load_indicator: "img[src='indicator.gif']"
+
+#process payment 
+subtotal: "input[id='subtotal_b']"
+shipping: "input[id='shipping_b']"
+transactionType: "td[class='normal']" #[2]
+
+#tipo de transacao
+ccard: ".//input[@value='ccard' and @type='radio']"
+onfile: ".//input[@value='onfile' and @type='radio']"
+numOfInstallment: "input[id='client_data5']"
+chargeInterest: ".//input[@id='client_data6' and @value='#{chargeInterest}']"
+processorName: "select[id='processor_id']"
+creditCard: "input[id='credit_card_number']"
+comment: "textarea[name='comments']"
+
+#customer ID fields
+idError: "p[class='error']"
+idFirstName: "input[id='consumer_first_name']"
+idLastName: "input[id='consumer_last_name']"
+idNumber: "input[id='consumer_id']"
+
+#Transaction Type somente process payment
+transactionType: "td[class='normal']" #[2]
+
+#installment somente process payment
+installmentNum: "input[id='client_data5']"
+chargeInterest: "td[class='normal']" #[7]
+processor_id: "select[id='processor_id']"
+paymentMethod: "td[class='normal']" #[3]
+
+#cartao
+creditCard: "input[id='credit_card_number']"
+expiresOn: "//*[@id='cc_key']/table/tbody" #usar com :xpath, antes do comando
+mes: "select[name='credit_card_expiration_month']"
+ano: "select[name='credit_card_expiration_year']"
+cvv: "input[id='cvv']"
+
+#preenche_endereco
+billing_full_name: "input[id='field_billing_name']"
+billing_company_name: "input[id='field_company_name']"
+billing_address: "input[id='field_billing_address']"
+billing_city: "input[id='field_billing_city']"
+billing_state: "select[id='field_billing_state']"
+billing_postal_code: "input[id='field_billing_postal_code']"
+billing_country: "select[id='field_billing_country']"
+billing_phone: "input[id='field_billing_phone']"
+billing_email: "input[id='field_billing_email']"
+
+
+#avancar pos cenario
+submitbar: "td[class='submitbar']"
+btn_continue: "input[class='normal']" #tela de process payment
+
+#tela de para confirmar/editar de transacao
+btn_edit: ".//input[@title='Editar' and @type='button']"
+btn_edit_en: ".//input[@title='Edit' and @type='button']"
+btn_continue_confirm: "input[name='continue_bt']" 
+confirma_total: "span[class='amountText']"
+
+#tela de conclusao da trasacao
+processorMsg: "td[class='hdrbold']" #[7]
+aprovado: "span[class='successbox']"
+fraude: "span[class='errorbox']"

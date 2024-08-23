@@ -1,0 +1,11 @@
+reports: "//*[@id='sc4']/table/tbody/tr/td/table/tbody/tr/td[2]/a"
+orderId: "input[name='orderId']"
+cpf: "input[name='cpf']"
+refNumber: "input[name='refNumber']"
+orderState: "select[id='orderState']"
+btn_gerar: "input[name='continue_bt']"
+todas_colunas: "td[class='w2 r b normal']"
+toCanceled: ".//td[@class='w2 b normal']/ancestor::tr[1]//a[contains(@onclick,'toCanceled')]"
+
+
+

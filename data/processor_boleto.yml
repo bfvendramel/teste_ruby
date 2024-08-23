@@ -1,0 +1,5 @@
+itau: "11"
+bradesco: "122"
+santander: "48"
+simulator: "1" #verificar não tem simulator
+bradesco_api: "106"

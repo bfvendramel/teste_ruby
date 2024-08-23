@@ -1,0 +1,22 @@
+title_controleFraud: ".//span[@class='title'][text()='Controle de Fraude']"
+
+transaction_id: ".//input[@name='primary_transaction_id']"
+gerar_relatorio: ".//input[@name='continue_bt']"
+
+
+period_today: ".//input[@name='period'][@value='today']"
+period_yesterday: ".//input[@name='period'][@value='yesterday']"
+period_thisweek: ".//input[@name='period'][@value='thisweek']"
+period_thismonth: ".//input[@name='period'][@value='thismonth']"
+
+
+# relatorios_Fraud:
+table: ".//table[@id='tbltxn']"
+table_Header: ".//table[@id='tbltxn']/tbody/tr/th[contains(@class,'mguserhdrbold2')]"
+table_body: ".//table[@id='tbltxn']/tbody/tr[contains(@class,'rptitem')]"
+table_item: "td[@class='w2 r b normal']"
+table_link: "/a[contains(@onclick,'goDetailPage')]"
+title_data: ".//*[@id='tbltxn']/tbody/tr/th[contains(text(),'Data')]"
+title_date: ".//*[@id='tbltxn']/tbody/tr/th[contains(text(),'Date')]"
+download_btn: ".//*[@title='Exportar para Excel (CSV)']"
+download_btn_en: ".//*[@title='Export to Excel(CSV)']"

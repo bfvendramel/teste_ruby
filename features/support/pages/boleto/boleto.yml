@@ -1,0 +1,5 @@
+#boleto Page
+barcode: ".//img[contains(@src,'barcode')]"
+boletopdf: ".//*[@type='application/pdf']"
+
+

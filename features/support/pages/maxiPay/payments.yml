@@ -1,0 +1,137 @@
+#maxipay
+lang: [Portugues,
+       Ingles,
+       Espanhol
+      ]
+
+#submenu
+maxiPay_en: ".//a[contains(text(),'Payment Link')]"
+maxiPay_pt: ".//a[contains(text(),'Link de Pagamento')]"
+transacoes: ".//a[contains(@onclick,'mxp_maxipay') and contains(text(),'Transações')]"
+transacoes_en: ".//a[contains(@onclick,'mxp_maxipay') and contains(text(),'Payments')]"
+
+transacoes_2: "a[class='hmenu']"
+
+transacoes_en_2: "//*[@id='sc4']/table/tbody/tr/td/table/tbody/tr/td[1]/a"
+
+xpath_submenu: "//*[@id='sc4']/table/tbody/tr/td/table/tbody/tr"
+
+#dados do cliente
+cnp_cnpj: "input[id='consumer_id']"
+btn_busca_cpf: "img[id='show']"
+email: "input[id='billing_email']"
+first_name: "input[id='consumer_first_name']"
+last_name: "input[id='consumer_last_name']"
+gender: "select[id='billing_gender']" #.find("*[value='M ou F']").select_option
+birth_date: "input[id='cust_birth_date']"
+phone: "input[id='cust_phone']"
+address: "input[id='cust_address']"
+city: "input[id='cust_city']"
+state: "select[id='cust_state']" #.find("*[value='sigla estado']").select_option
+country: "select[id='cust_country']" #.find("*[value='BR']").select_option
+zip_code: "input[id='cust_postal_code']"
+language: "select[id='language']" #.find("*[value='pt_br / en / es']").select_option
+
+#dados do cliente billing
+
+billing_cnp_cnpj: "input[id='billing_id']"
+billing_rg: "input[id='billing_rg']"
+billing_full_name: "input[id='billing_name']"
+billing_birth_date: "input[id='birth_date']"
+billing_address: "input[id='billing_address']" 
+billing_city: "input[id='billing_city']"
+billing_bairro: "input[id='billing_district']"
+billing_state: "select[id='billing_state']" #.find("*[value='sigla estado']").select_option
+billing_country: "select[id='billing_country']" #.find("*[value='BR']").select_option
+billing_zip_code: "input[id='billing_postal_code']"
+billing_phone: "input[id='billing_phone']"
+
+#dados do cliente shipping
+show_info_shipping: "a[onclick='javascript:showSInfo(true);return false;']"
+check_copy_info: "input[id='sameasbilling1']"
+shipping_cnp_cnpj: "input[id='shipping_id']"
+shipping_rg: "input[id='shipping_rg']"
+shipping_full_name: "input[id='shipping_name']"
+shipping_birth_date: "input[id='shipping_birth_date']"
+shipping_address: "input[id='shipping_address']"
+shipping_city: "input[id='shipping_city']"
+shipping_bairro: "input[id='shipping_district']"
+shipping_state: "select[id='shipping_state']" #.find("*[value='sigla estado']").select_option
+shipping_country: "select[id='shipping_country']" #.find("*[value='BR']").select_option
+shipping_zip_code: "input[id='shipping_postal_code']"
+shipping_phone: "input[id='shipping_phone']"
+shipping_email: "input[id='shipping_email']"
+
+#dados do pedido 
+order_id: "input[id='order_id']"
+description: "textarea[id='product_descriptor']"
+email_subject: "input[id='email_subject']" #.send_keys [:control, "a"]
+paymentMethod:
+  card: ".//input[@id='txnmethod' and @value='ccard']" #type radio
+  bank_slip: ".//input[@id='txnmethod' and @value='boleto']" #type radio
+
+#dados cartao de credito
+installments: "select[id='max_installment']" #.find("*[value='(rand(1..12))']").select_option
+
+
+#dados do boleto
+bank: "select[id='available_banks']"
+discount:
+  discountype: "select[id='discounttype']" #.find("*[value='percentual / amount']").select_option
+  discountvalue: "input[id='discountvalue']"
+  discountdate: "input[id='discountdate']"
+fine:
+  chargetype: "select[id='chargetype']" #.find("*[value='percentual / amount']").select_option
+  chargevalue: "input[id='chargevalue']"
+  chargedate: "input[id='chargedate']"
+interestratetype:
+  interestratetype: "select[id='interestratetype']" #.find("*[value='percentual / amount']").select_option
+  interestratevalue: "input[id='interestratevalue']"
+  interestratedate: "input[id='ratedate']"
+frequency: "select[id='frequency']" #.find("*[value='daily / monthly / yearly']").select_option
+######
+expiryDate: "input[id='startdate_b']"
+amount_field: "input[id='transaction_amount']"
+amount: "transaction_amount"
+
+#recorrencia
+recurring_payment: "select[id='RECURRING_PAYMENT']" #.find("*[value='Y ou N']").select_option
+recurring_amount: "input[id='RECURRING_AMOUNT']"
+recurring_period: "select[id='RECURRING_PERIOD']" #.find("*[value='d / w / m / b / q / s / a]").select_option
+recurring_installments: "input[id='RECURRING_INSTALLMENTS']"
+recurring_1st_date: "input[id='startdate_RECURRING_FIRST_DATE']"
+########
+
+btn_continuar: "input[name='continue_bt']"
+# msg_confirmacao: "//*[@id='main']/tbody/tr/td/table/tbody/tr[2]/td[2]/table/tbody/tr[1]/td[2]/span"   
+
+#Tela de Revisão
+title_revisao: ".//span[@class='title'][text()='Revisão']"
+#title_revisao: "span[class='title']"
+
+msg_confirmacao: "td[align='left']" #[2]
+motivo_falha: "td[class='error']"
+
+#tela confirmacao link de pagamento
+info_valor: "td[class='amountText']"
+valor: 1
+info_dado: "td[class='normal']"
+name_email: 0
+num_pedido: 1
+desc_pedido: 2
+link_pgto: 3
+
+#retirar loja
+campo_retirar: "select[id='withdraw_store']"
+opt_nao: 0
+opt_sim: 1
+table_info_loja: "table[id='tb_shipping_info']"
+
+
+
+
+
+
+
+
+

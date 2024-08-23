@@ -1,0 +1,9 @@
+btn_ver_dia_hoje: ".//input[@name='continue_bt'][contains(@onclick,'rptcurrentbatch')]"
+# ".//input[@name='continue_bt'][contains(@value,'Ver dia de hoje ')]"
+relatorio_msg_error: ".//p[@class='error']"
+
+table_result: ".//table[@class='mguser']"
+table_header: ".//th[@class='mguserhdrbold2 r b']"
+table_body: ".//tr[@class='rptitem']/ancestor::tbody[1]/tr"
+
+

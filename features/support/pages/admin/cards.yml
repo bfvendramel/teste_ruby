@@ -1,0 +1,36 @@
+cartoes: "//*[@id='sc3']/table/tbody/tr/td/table/tbody/tr/td[4]/a"
+
+btn_add_card_pt: ".//input[@class='normal' and @type='button' and @title='Adicionar novo cartão']"
+btn_add_card_en: ".//input[@class='normal' and @type='button' and @title='Add New Card on File']"
+
+campo_busca_cust: "input[id='textsearchfield']" 
+btn_busca_cust: "img[id='show']" 
+
+cust_first_name: "input[id='consumer_first_name']" #apenas validacao
+cust_last_name: "input[id='consumer_last_name']" #apenas validacao
+cust_id: "input[id='consumer_id']" #apenas validacao
+card_end_date: "input[id='on_file_end_date_b']" 
+max_amount: "input[id='max_charge_amount_b']" 
+comments: "textarea[id='on_file_comment']" 
+card_number: "input[id='credit_card_number']"
+card_exp_month: "select[id='credit_card_expiration_month']" #.select_option
+card_exp_year: "select[id='credit_card_expiration_year']" #.select_option
+btn_salva_card: "input[name='continue_bt']"
+success_msg: "td[class='success']"
+
+msg_card_already_added: "span[title='This card number already exist.']"
+
+cartao_1: "tr[class='rptitem']"
+cartao_2: "tr[class='rptitem1']"
+cartao_0: ".//tr[@class='rptitem']/ancestor::tbody[1]/tr"
+
+card_valor_max: "td[class='normal r b']" #posicao 3
+table_header: ".//th[@class='mguserhdrbold2 r b']"
+table_header: ".//th[@class='mguserhdrbold2 r b']"
+
+date_from_radio: "input[id='dateTypeCustom']"
+date_today_radio: "input[id='dateTypeToday']"
+date_start_field: "input[id='customFromDate']"
+date_finish_field: "input[id='customToDate']"
+date_btn_buscar: ".//input[@class='normal' and contains(@onclick,'filterConsumer()')]"
+  # "input[title='Buscar']"

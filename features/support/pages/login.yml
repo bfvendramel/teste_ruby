@@ -1,0 +1,9 @@
+    #login home
+    user_id: "input[name='id']"
+    password: "input[name='password']"
+    btn_login: "input[type='submit']"
+    lang_pt: "img[src='/vpos/docs/images/wlmxp01/Brazil_flag.png']"
+    lang_en: "img[src='/vpos/docs/images/wlmxp01/English_flag.png']"
+    campo_senha: "td[class='textlabel']"
+    selected_menu: "a[class='current']"
+
